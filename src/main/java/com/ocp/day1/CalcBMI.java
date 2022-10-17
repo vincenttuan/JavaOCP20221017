@@ -14,6 +14,9 @@ public class CalcBMI {
         //------------------------------------------------------------------
         calcAndPrintBMI(170, 60);
         calcAndPrintBMI(180, 75);
+        //------------------------------------------------------------------
+        BMIUtil.calcAndPrintBMI(170, 60);
+        BMIUtil.calcAndPrintBMI(180, 75);
     }
     
     public static void calcAndPrintBMI(double height, double weight) {
