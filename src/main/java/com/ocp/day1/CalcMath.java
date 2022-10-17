@@ -30,7 +30,13 @@ public class CalcMath {
         double sd = Math.sqrt(dx); // 標準差: Math.sqrt 開根號
         return sd;
     }
-    
+    // 計算變異係數的方法
+    public static double calcCV(int x, int y, int z) {
+        double sd = calcSD(x, y, z);
+        double avg = calcAvg(x, y, z);
+        double cv = sd / avg;
+        return cv;
+    }
     
     
     
