@@ -30,6 +30,7 @@ public class ArrayDemo2 {
         // 5. 印出每一個元素內容使用 Java 8 Stream 串流
         Arrays.stream(scores).forEach(score -> System.out.print(score + ", "));
         System.out.println(); // 換行符號
+        Arrays.stream(scores).forEach(System.out::println);
         
     }
 }
