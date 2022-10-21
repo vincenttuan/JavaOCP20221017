@@ -1,5 +1,7 @@
 package com.ocp.day2;
 
+import java.util.Arrays; // 提供一些好用的陣列工具
+
 public class ArrayDemo2 {
     public static void main(String[] args) {
         // 陣列自訂初始資料
@@ -22,5 +24,8 @@ public class ArrayDemo2 {
         for (int i = 0, len = scores.length ; i < len; i++) {
             System.out.print(scores[i] + ", ");
         }
+        System.out.println(); // 換行符號
+        // 印出每一個元素內容使用 Arrays 類別所提供的 toString() 方法
+        System.out.println(Arrays.toString(scores));
     }
 }
