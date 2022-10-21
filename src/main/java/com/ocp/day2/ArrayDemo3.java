@@ -6,6 +6,8 @@ public class ArrayDemo3 {
         // 計算個數, 總和, 平均, 最大值, 最小值
         System.out.printf("個數: %d\n", scores.length);
         System.out.printf("總和: %d\n", getSum(scores));
+        System.out.printf("平均: %.1f\n", getAvg(scores));
+        
     }
     // 設計一個可以針對一維陣列計算出總和的方法
     public static int getSum(int[] array) {
@@ -15,6 +17,11 @@ public class ArrayDemo3 {
         }
         return sum;
     }
-    
+    // 設計一個可以針對一維陣列計算出平均的方法
+    public static double getAvg(int[] array) {
+        int sum = getSum(array);
+        double avg = (double)sum / array.length;
+        return avg;
+    }
     
 }
