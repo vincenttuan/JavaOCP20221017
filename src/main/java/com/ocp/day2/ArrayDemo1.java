@@ -15,5 +15,7 @@ public class ArrayDemo1 {
         System.out.println(x[0]); // 印出 x[0] 的內容
         System.out.println(x[1]); // 印出 x[1] 的內容
         System.out.println(x[2]); // 印出 x[2] 的內容
+        // 陣列的最小維度 = 0
+        // 陣列的最大維度 = 陣列長度 - 1
     }
 }
