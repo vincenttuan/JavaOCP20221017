@@ -7,6 +7,8 @@ public class ArrayDemo3 {
         System.out.printf("個數: %d\n", scores.length);
         System.out.printf("總和: %d\n", getSum(scores));
         System.out.printf("平均: %.1f\n", getAvg(scores));
+        System.out.printf("最大: %d\n", getMax(scores));
+        System.out.printf("最小: %d\n", getMin(scores));
         
     }
     // 設計一個可以針對一維陣列計算出總和的方法
@@ -35,7 +37,8 @@ public class ArrayDemo3 {
     }
     // 設計一個可以針對一維陣列計算出最小值的方法
     public static int getMin(int[] array) {
-        int min = 100; // 預設最小值 = 100
+        //int min = 100; // 預設最小值 = 100
+        int min = array[0]; // 預設值第一個元素內容
         for(int value : array) {
             if(value < min) {
                 min = value;
