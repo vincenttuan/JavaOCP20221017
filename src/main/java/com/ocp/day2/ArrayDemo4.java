@@ -1,7 +1,6 @@
 package com.ocp.day2;
 
 import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class ArrayDemo4 {
     public static void main(String[] args) {
