@@ -23,5 +23,24 @@ public class ArrayDemo3 {
         double avg = (double)sum / array.length;
         return avg;
     }
-    
+    // 設計一個可以針對一維陣列計算出最大值的方法
+    public static int getMax(int[] array) {
+        int max = 0; // 預設最大值 = 0
+        for(int value : array) {
+            if(value > max) {
+                max = value;
+            }
+        }
+        return max;
+    }
+    // 設計一個可以針對一維陣列計算出最小值的方法
+    public static int getMin(int[] array) {
+        int min = 100; // 預設最小值 = 100
+        for(int value : array) {
+            if(value < min) {
+                min = value;
+            }
+        }
+        return min;
+    }
 }
