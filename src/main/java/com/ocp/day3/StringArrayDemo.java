@@ -7,6 +7,7 @@ public class StringArrayDemo {
         String[] names = str.split(", ");
         System.out.println(str.length()); // 字串長度
         System.out.println(names.length); // 陣列長度
+        // 請問平均名字有幾個字(取到小數點一位)?
         
     }
 }
