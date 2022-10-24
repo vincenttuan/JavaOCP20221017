@@ -11,7 +11,7 @@ public class StringArrayDemo3 {
         int sum = 0; // 及格累計分數
         int count = 0; // 及格人數
         for(String score : scores) {
-            int x = Integer.parseInt(score);
+            int x = Integer.parseInt(score); // 字串轉數字
             if(x >= 60) {
                 sum += x;
                 count++;
