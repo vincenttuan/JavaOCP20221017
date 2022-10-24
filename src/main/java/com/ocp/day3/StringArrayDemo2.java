@@ -16,10 +16,10 @@ public class StringArrayDemo2 {
         // 1. 將 [John, Mary, Vincent, Jo, Helen]
         // 2. 轉 [4, 4, 7, 2, 5]
         // 3. 計算平均
-        double avg = Arrays.stream(names)
-                           .mapToInt(name -> name.length())
-                           .average()
-                           .getAsDouble();
+        double avg = Arrays.stream(names) // 1. 將 [John, Mary, Vincent, Jo, Helen]
+                           .mapToInt(name -> name.length()) // 2. 轉 [4, 4, 7, 2, 5]
+                           .average() // 3. 計算平均
+                           .getAsDouble(); // 4. 取值
         System.out.printf("avg = %.1f\n", avg);
     }
 }
