@@ -25,6 +25,12 @@ public class MultiArrayDemo1 {
                 System.out.println(x[i][k]);
             }
         }
-        
+        System.out.println("利用 for-each 印出:");
+        for(int[] y : x) {
+            System.out.println(y); // 一維陣列
+            for(int value : y) {
+                System.out.println(value);
+            }
+        }
     }
 }
