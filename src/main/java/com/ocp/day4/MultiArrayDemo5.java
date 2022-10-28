@@ -19,6 +19,9 @@ public class MultiArrayDemo5 {
         
         int[][] arraysT2 = getT(arrays);
         System.out.println(Arrays.deepToString(arraysT2));
+        
+        int[][] arraysT3 = getT(arraysT2);
+        System.out.println(Arrays.deepToString(arraysT3));
     }
     
     private static int[][] getT(int [][] arrays) {
