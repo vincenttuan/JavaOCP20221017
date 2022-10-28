@@ -19,4 +19,15 @@ public class MultiArrayDemo2 {
         }
     }
     
+    // 計算二維陣列內容全部加總的方法
+    private static int getSum(int[][] arrays) {
+        int sum = 0;
+        for(int[] array : arrays) {
+            for(int value : array) {
+                sum += value;
+            }
+        }
+        return sum;
+    }
+    
 }
