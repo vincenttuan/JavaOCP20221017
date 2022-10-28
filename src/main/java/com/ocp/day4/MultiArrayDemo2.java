@@ -7,7 +7,8 @@ public class MultiArrayDemo2 {
         // 1. 請把所有內容印出
         print(x);
         // 2. 計算全部加總的值
-        
+        int total = getSum(x);
+        System.out.println(total);
     }
     
     // 印出二維陣列內容的方法
