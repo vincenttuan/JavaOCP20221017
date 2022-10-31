@@ -10,5 +10,13 @@ public class OO6 {
             new Student("Kita", 50),
         };
         System.out.println(students);
+        // for-loop
+        for(int i=0, len=students.length ; i<len ; i++) {
+            students[i].printStudentData();
+        }
+        // for-each
+        for(Student student : students) {
+            student.printStudentData();
+        }
     }
 }
