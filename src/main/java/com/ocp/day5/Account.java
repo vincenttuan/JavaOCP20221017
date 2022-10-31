@@ -29,11 +29,15 @@ public class Account {
     }
     
     // 設計一個轉帳(transfer)的方法
-    public void transfer(Account ac2, int amount) {
+    public boolean transfer(Account ac2, int amount) {
         // ac1 先提款
-        withDraw(amount);
-        // ac2 再存款
-        ac2.deposit(amount);
+        if(withDraw(amount)) {
+            // ac2 再存款
+            ac2.deposit(amount);
+            return true;
+        }
+        System.out.println("轉帳不成功");
+        return false;
     }    
     
     public void printAccount() {
