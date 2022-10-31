@@ -9,8 +9,8 @@ public class Student {
         System.out.println("建立 Student 物件");
     }
     // 有參數建構子
-    public Student(String myName, int myScore) {
-        name = myName;
-        score = myScore;
+    public Student(String name, int score) {
+        this.name = name;
+        this.score = score;
     }
 }
