@@ -5,7 +5,8 @@ public class Account {
     String name; // 戶名
     int balance; // 帳戶餘額
     
-    public Account(int balance) {
+    public Account(String name, int balance) {
+        this.name = name;
         this.balance = balance;
     }
     
