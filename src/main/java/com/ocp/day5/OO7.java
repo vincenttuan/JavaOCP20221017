@@ -9,6 +9,7 @@ public class OO7 {
             new Student("Jack", 70),
             new Student("Kita", 50),
         };
+        // 印出及格者的平均分數 = ?
         
     }
 }
