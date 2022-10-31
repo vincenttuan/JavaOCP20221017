@@ -25,7 +25,12 @@ public class Account {
     }
     
     // 設計一個轉帳(transfer)的方法
-    
+    public void transfer(Account ac2, int amount) {
+        // ac1 先提款
+        withDraw(amount);
+        // ac2 再存款
+        ac2.deposit(amount);
+    }    
     
     public void printAccount() {
         System.out.println(name + " $" + balance);
