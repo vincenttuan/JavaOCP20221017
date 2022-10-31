@@ -11,17 +11,21 @@ public class Account {
     }
     
     // 存款
-    public void deposit(int amount) {
+    public boolean deposit(int amount) {
         if(amount > 0) { // 過濾 amount > 0
             balance += amount;
+            return true;
         }
+        return false;
     }
     
     // 提款
-    public void withDraw(int amount) {
+    public boolean withDraw(int amount) {
         if(amount > 0 && amount <= balance) {
             balance -= amount;
+            return true;
         }
+        return false;
     }
     
     // 設計一個轉帳(transfer)的方法
