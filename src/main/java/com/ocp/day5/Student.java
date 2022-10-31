@@ -10,6 +10,7 @@ public class Student {
     }
     // 有參數建構子
     public Student(String myName, int myScore) {
-        
+        name = myName;
+        score = myScore;
     }
 }
