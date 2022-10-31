@@ -1,7 +1,6 @@
 package com.ocp.day5;
 
 import java.util.Arrays;
-import java.util.stream.Stream;
 
 public class OO6 {
     public static void main(String[] args) {
@@ -27,5 +26,6 @@ public class OO6 {
         // Java Stream + :: (方法參考)
         Arrays.stream(students)
                 .forEach(Student::printStudentData);
+        
     }
 }
