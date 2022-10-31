@@ -24,6 +24,9 @@ public class Account {
         }
     }
     
+    // 設計一個轉帳(transfer)的方法
+    
+    
     public void printAccount() {
         System.out.println(name + " $" + balance);
     }
