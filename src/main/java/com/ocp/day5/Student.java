@@ -13,4 +13,9 @@ public class Student {
         this.name = name;
         this.score = score;
     }
+    // 物件方法
+    // 印出學生資料的方法
+    public void printStudentData() {
+        System.out.println(name +" " + score);
+    }
 }
