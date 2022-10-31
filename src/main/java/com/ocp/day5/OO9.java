@@ -7,5 +7,8 @@ public class OO9 {
         // 存款 $500
         ac1.deposit(500);
         ac1.printAccount();
+        // 提款 $3000
+        ac1.withDraw(3000);
+        ac1.printAccount();
     }
 }

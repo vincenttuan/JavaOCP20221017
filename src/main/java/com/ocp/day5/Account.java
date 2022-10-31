@@ -17,6 +17,13 @@ public class Account {
         }
     }
     
+    // 提款
+    public void withDraw(int amount) {
+        if(amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+    
     public void printAccount() {
         System.out.println(name + " $" + balance);
     }
