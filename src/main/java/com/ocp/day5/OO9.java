@@ -12,7 +12,7 @@ public class OO9 {
         ac1.withDraw(3000);
         ac1.printAccount();
         // John 轉給 Mary 4000 元
-        ac1.transfer(ac2, 48000);
+        ac1.transfer(ac2, 4000);
         ac1.printAccount();
         ac2.printAccount();
     }
