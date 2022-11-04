@@ -55,8 +55,8 @@ public class ArrayListDemo2 {
     // 1. 簽到
     public static void add() {
         System.out.println("簽到");
-        System.out.print("請輸入人名: ");
         Scanner scanner = new Scanner(System.in);
+        System.out.print("請輸入人名: ");
         String name = scanner.next();
         names.add(name); // 將 name 加入到 names 集合中
         System.out.println("簽到完成");
@@ -65,6 +65,13 @@ public class ArrayListDemo2 {
     // 2. 修改
     public static void update() {
         System.out.println("修改");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("請輸入 index: ");
+        int index = scanner.nextInt();
+        System.out.print("請輸入修改後的人名: ");
+        String updateName = scanner.next();
+        names.set(index, updateName); // 修改
+        System.out.println("修改完成");
     }
     
     // 3. 刪除
