@@ -24,22 +24,22 @@ public class ArrayListDemo2 {
         int choice = scanner.nextInt(); // 得到使用者所輸入的選項
         switch (choice) {
             case 1:
-                add();
+                add(); // 簽到
                 break;
             case 2:
-                update();
+                update(); // 修改
                 break;
             case 3:
-                delete();
+                delete(); // 刪除
                 break;
             case 4:
-                findOne();
+                findOne(); // 單筆查詢
                 break;
             case 5:
-                findAll();
+                findAll(); // 全部查詢
                 break;
             case 0:
-                exit();
+                exit(); // 離開
                 break;
             
         }
