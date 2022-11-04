@@ -120,7 +120,25 @@ public class ArrayListDemo2 {
     }
     
     // 根據人名來修改
-    
+    public static void updateByName() {
+        System.out.println("根據人名來修改");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("輸入要修改的人名(修改前 修改後): ");
+        String pairName = scanner.nextLine();
+        String[] array = pairName.split(" ");
+        if(array.length == 2) {
+            String beforeName = array[0];
+            String afterName = array[1];
+            for(int index=0;index<names.size();index++) {
+                if(names.get(index).equals(beforeName)) {
+                    names.set(index, afterName);
+                    System.out.println("修改完成");
+                    return; // 方法結束
+                }
+            }
+        }
+        System.out.println("修改失敗/查無此人");
+    }
     
     // 0. 離開系統
     public static void exit() {
