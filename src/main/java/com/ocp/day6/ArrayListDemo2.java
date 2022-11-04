@@ -1,8 +1,8 @@
 package com.ocp.day6;
 
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.Scanner;
-import org.w3c.dom.ls.LSOutput;
 
 public class ArrayListDemo2 {
     // 利用類別變數存放所有的簽到資料
@@ -56,6 +56,9 @@ public class ArrayListDemo2 {
             case 0:
                 exit(); // 離開
                 break;
+            default:
+                // 發出聲音
+                Toolkit.getDefaultToolkit().beep();
         }
         System.out.println("請按下 y 繼續 ...");
         scanner.next();
