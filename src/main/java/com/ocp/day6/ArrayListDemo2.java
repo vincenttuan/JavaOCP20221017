@@ -1,8 +1,12 @@
 package com.ocp.day6;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArrayListDemo2 {
+    // 利用類別變數存放所有的簽到資料
+    static ArrayList<String> names = new ArrayList<>();
+    
     // 程式進入點
     public static void main(String[] args) {
         while (true) {            
