@@ -26,6 +26,7 @@ public class ArrayListDemo2 {
         System.out.println("5. 全部查詢");
         System.out.println("6. 多筆(批次)新增");
         System.out.println("7. 根據人名來修改");
+        System.out.println("8. 根據人名來刪除");
         System.out.println("0. Exit");
         System.out.println("----------------");
         System.out.print("請選擇: ");
@@ -52,6 +53,9 @@ public class ArrayListDemo2 {
                 break;
             case 7:
                 updateByName(); // 根據人名來修改    
+                break;
+            case 8:
+                deleteByName(); // 根據人名來刪除
                 break;
             case 0:
                 exit(); // 離開
@@ -147,6 +151,12 @@ public class ArrayListDemo2 {
             }
         }
         System.out.println("修改失敗/查無此人");
+    }
+    
+    // 8. 根據人名來刪除
+    public static void deleteByName() {
+        System.out.println("根據人名來刪除");
+        
     }
     
     // 0. 離開系統
