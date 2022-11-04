@@ -101,6 +101,20 @@ public class ArrayListDemo2 {
         System.out.println("資料筆數: " + names.size());
     }
     
+    // 6. 多筆(批次)新增
+    public static void batchAdd() {
+        System.out.println("多筆(批次)新增");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("請輸入人名(名字間請用空白隔開): ");
+        String allname = scanner.next();
+        String[] array = allname.split(" ");
+        // 透過 for-each 逐筆新增到 names 中
+        for(String name : array) {
+            names.add(name);
+        }
+        System.out.println("多筆(批次)新增完成");
+    }
+    
     // 0. 離開系統
     public static void exit() {
         // status: 0 表示結束當前正在運行的程式
