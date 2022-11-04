@@ -77,11 +77,21 @@ public class ArrayListDemo2 {
     // 3. 刪除
     public static void delete() {
         System.out.println("刪除");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("請輸入 index: ");
+        int index = scanner.nextInt();
+        names.remove(index); // 移除
+        System.out.println("刪除完成");
     }
     
     // 4. 單筆查詢
     public static void findOne() {
         System.out.println("單筆查詢");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("請輸入 index: ");
+        int index = scanner.nextInt();
+        String name = names.get(index);
+        System.out.println("人名: " + name);
     }
     
     // 5. 全部查詢
