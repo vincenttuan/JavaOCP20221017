@@ -52,32 +52,39 @@ public class ArrayListDemo2 {
         scanner.next();
     }
     
-    // 簽到
+    // 1. 簽到
     public static void add() {
         System.out.println("簽到");
+        System.out.print("請輸入人名: ");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.next();
+        names.add(name); // 將 name 加入到 names 集合中
+        System.out.println("簽到完成");
     }
     
-    // 修改
+    // 2. 修改
     public static void update() {
         System.out.println("修改");
     }
     
-    // 刪除
+    // 3. 刪除
     public static void delete() {
         System.out.println("刪除");
     }
     
-    // 單筆查詢
+    // 4. 單筆查詢
     public static void findOne() {
         System.out.println("單筆查詢");
     }
     
-    // 全部查詢
+    // 5. 全部查詢
     public static void findAll() {
         System.out.println("全部查詢");
+        System.out.println(names);
+        System.out.println("資料筆數: " + names.size());
     }
     
-    // 離開系統
+    // 0. 離開系統
     public static void exit() {
         // status: 0 表示結束當前正在運行的程式
         // status: 1 表示非正常結束
