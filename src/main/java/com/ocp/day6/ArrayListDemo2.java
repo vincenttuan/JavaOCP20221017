@@ -27,6 +27,7 @@ public class ArrayListDemo2 {
         System.out.println("6. 多筆(批次)新增");
         System.out.println("7. 根據人名來修改");
         System.out.println("8. 根據人名來刪除");
+        System.out.println("9. 清空打卡資訊");
         System.out.println("0. Exit");
         System.out.println("----------------");
         System.out.print("請選擇: ");
@@ -56,6 +57,9 @@ public class ArrayListDemo2 {
                 break;
             case 8:
                 deleteByName(); // 根據人名來刪除
+                break;
+            case 9:
+                clear(); // 清空打卡資訊
                 break;
             case 0:
                 exit(); // 離開
@@ -163,6 +167,17 @@ public class ArrayListDemo2 {
             System.out.println("刪除成功");
         } else {
             System.out.println("刪除失敗");
+        }
+    }
+    
+    // 9. 清空打卡資訊
+    public static void clear() {
+        System.out.print("是否要清空打卡資訊(y/n): ");
+        Scanner scanner = new Scanner(System.in);
+        String check = scanner.next();
+        if(check.equalsIgnoreCase("y")) {
+            names.clear();
+            System.out.println("清空打卡資訊成功");
         }
     }
     
