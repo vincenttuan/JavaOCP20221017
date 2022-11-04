@@ -156,7 +156,14 @@ public class ArrayListDemo2 {
     // 8. 根據人名來刪除
     public static void deleteByName() {
         System.out.println("根據人名來刪除");
-        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("請輸入欲刪除的人名: ");
+        String name = scanner.next();
+        if(names.remove(name)) {
+            System.out.println("刪除成功");
+        } else {
+            System.out.println("刪除失敗");
+        }
     }
     
     // 0. 離開系統
