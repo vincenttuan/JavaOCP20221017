@@ -41,33 +41,34 @@ public class ArrayListDemo2 {
             case 0:
                 exit(); // 離開
                 break;
-            
         }
+        System.out.println("請按下 y 繼續 ...");
+        scanner.next();
     }
     
     // 簽到
     public static void add() {
-        
+        System.out.println("簽到");
     }
     
     // 修改
     public static void update() {
-    
+        System.out.println("修改");
     }
     
     // 刪除
     public static void delete() {
-    
+        System.out.println("刪除");
     }
     
     // 單筆查詢
     public static void findOne() {
-    
+        System.out.println("單筆查詢");
     }
     
     // 全部查詢
     public static void findAll() {
-    
+        System.out.println("全部查詢");
     }
     
     // 離開系統
