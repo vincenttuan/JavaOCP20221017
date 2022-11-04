@@ -20,6 +20,10 @@ public class ArrayListDemo1 {
         names.remove(1);
         System.out.println(names);
         System.out.println(names.size());
+        // 利用 for-each 逐一印出所有元素內容
+        for(String name : names) {
+            System.out.println(name);
+        }
         
     }
 }
