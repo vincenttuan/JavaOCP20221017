@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class ArrayListDemo2 {
     // 程式進入點
     public static void main(String[] args) {
-        
+        while (true) {            
+             menu();
+        }
     }
     
     // 系統功能目錄
