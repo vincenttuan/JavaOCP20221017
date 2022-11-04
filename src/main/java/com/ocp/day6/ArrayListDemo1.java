@@ -14,5 +14,12 @@ public class ArrayListDemo1 {
         names.add("Jack");
         System.out.println(names);
         System.out.println(names.size());
+        // 取得元素
+        System.out.println(names.get(1));
+        // 刪除/移除元素
+        names.remove(1);
+        System.out.println(names);
+        System.out.println(names.size());
+        
     }
 }
