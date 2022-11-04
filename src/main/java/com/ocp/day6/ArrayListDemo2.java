@@ -59,6 +59,7 @@ public class ArrayListDemo2 {
             default:
                 // 發出聲音
                 Toolkit.getDefaultToolkit().beep();
+                System.out.println("無此選單, 請重新輸入...");
         }
         System.out.println("請按下 y 繼續 ...");
         scanner.next();
