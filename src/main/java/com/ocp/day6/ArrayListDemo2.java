@@ -2,6 +2,7 @@ package com.ocp.day6;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import org.w3c.dom.ls.LSOutput;
 
 public class ArrayListDemo2 {
     // 利用類別變數存放所有的簽到資料
@@ -24,6 +25,7 @@ public class ArrayListDemo2 {
         System.out.println("4. 單筆查詢");
         System.out.println("5. 全部查詢");
         System.out.println("6. 多筆(批次)新增");
+        System.out.println("7. 根據人名來修改");
         System.out.println("0. Exit");
         System.out.println("----------------");
         System.out.print("請選擇: ");
@@ -47,6 +49,9 @@ public class ArrayListDemo2 {
                 break;
             case 6:
                 batchAdd(); // 多筆(批次)新增 
+                break;
+            case 7:
+                updateByName(); // 根據人名來修改    
                 break;
             case 0:
                 exit(); // 離開
@@ -119,7 +124,7 @@ public class ArrayListDemo2 {
         System.out.println("多筆(批次)新增完成");
     }
     
-    // 根據人名來修改
+    // 7. 根據人名來修改
     public static void updateByName() {
         System.out.println("根據人名來修改");
         Scanner scanner = new Scanner(System.in);
