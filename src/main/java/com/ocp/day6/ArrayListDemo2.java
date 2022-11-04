@@ -110,7 +110,7 @@ public class ArrayListDemo2 {
         System.out.println("多筆(批次)新增");
         Scanner scanner = new Scanner(System.in);
         System.out.print("請輸入人名(名字間請用空白隔開): ");
-        String allname = scanner.next();
+        String allname = scanner.nextLine(); // 讀取一整列
         String[] array = allname.split(" ");
         // 透過 for-each 逐筆新增到 names 中
         for(String name : array) {
