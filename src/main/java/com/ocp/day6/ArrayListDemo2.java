@@ -23,6 +23,7 @@ public class ArrayListDemo2 {
         System.out.println("3. 刪除");
         System.out.println("4. 單筆查詢");
         System.out.println("5. 全部查詢");
+        System.out.println("6. 多筆(批次)新增");
         System.out.println("0. Exit");
         System.out.println("----------------");
         System.out.print("請選擇: ");
@@ -43,6 +44,9 @@ public class ArrayListDemo2 {
                 break;
             case 5:
                 findAll(); // 全部查詢
+                break;
+            case 6:
+                batchAdd(); // 多筆(批次)新增 
                 break;
             case 0:
                 exit(); // 離開
