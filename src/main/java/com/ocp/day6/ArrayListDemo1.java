@@ -24,6 +24,12 @@ public class ArrayListDemo1 {
         for(String name : names) {
             System.out.println(name);
         }
+        // 修改利用 set(index, 修改的資料內容)
+        // 將 John 改為 Helen
+        // [John, Jack] -> [Helen, Jack]
+        System.out.println("修改前: " + names);
+        names.set(0, "Helen");
+        System.out.println("修改後: " + names);
         
     }
 }
