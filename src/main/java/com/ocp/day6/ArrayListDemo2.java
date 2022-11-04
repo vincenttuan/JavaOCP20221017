@@ -75,6 +75,7 @@ public class ArrayListDemo2 {
     public static void exit() {
         // status: 0 表示結束當前正在運行的程式
         // status: 1 表示非正常結束
+        System.out.println("離開系統");
         System.exit(0); 
     }
     
