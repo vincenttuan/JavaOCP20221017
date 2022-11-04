@@ -119,6 +119,9 @@ public class ArrayListDemo2 {
         System.out.println("多筆(批次)新增完成");
     }
     
+    // 根據人名來修改
+    
+    
     // 0. 離開系統
     public static void exit() {
         // status: 0 表示結束當前正在運行的程式
