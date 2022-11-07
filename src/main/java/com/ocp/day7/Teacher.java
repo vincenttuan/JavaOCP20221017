@@ -15,7 +15,11 @@ public class Teacher extends Person {
     public void job() {
         System.out.println("教課");
     }
-    
+
+    @Override
+    public String toString() {
+        return "Teacher{" + "salary=" + salary + '}';
+    }
     
     
 }

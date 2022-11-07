@@ -18,4 +18,11 @@ public class Student extends Person {
         System.out.println("讀書");
     }
     
+    // 覆寫 toString()
+
+    @Override
+    public String toString() {
+        return "Student{" + "score=" + score + '}';
+    }
+    
 }

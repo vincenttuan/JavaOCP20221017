@@ -17,5 +17,8 @@ public class Main {
         
         System.out.println(teacher.getName() + ", " + teacher.getAge() + ", " + teacher.getSalary());
         teacher.job();
+        
+        System.out.println(student); // student.toString();
+        System.out.println(teacher); // teacher.toString();
     }
 }
