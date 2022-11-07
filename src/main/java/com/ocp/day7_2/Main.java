@@ -14,5 +14,7 @@ public class Main {
         System.out.println(student2.getScore());
         System.out.println(student2);
         
+        Teacher teacher = new Teacher("Helen", 30, 70000);
+        System.out.println(teacher);
     }
 }
