@@ -7,5 +7,12 @@ public class Main {
         System.out.println(student.getAge());
         System.out.println(student.getScore());
         System.out.println(student);
+        
+        Student student2 = new Student("Mary", 17, 75);
+        System.out.println(student2.getName());
+        System.out.println(student2.getAge());
+        System.out.println(student2.getScore());
+        System.out.println(student2);
+        
     }
 }
