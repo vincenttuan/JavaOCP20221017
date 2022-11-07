@@ -1,6 +1,7 @@
 package com.ocp.day7_2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 // 組合模式
 public class Classroom {
@@ -43,7 +44,20 @@ public class Classroom {
     public void removeAllStudents() {
         students.clear();
     }
-
+    
+    // 計算學生平均成績 
+    public double getAvgOfScore() {
+        if(students.size() == 0) {
+            return 0.0;
+        }
+        return students.stream()
+                       .mapToInt(Student::getScore)
+                       //.mapToInt(student -> student.getScore())
+                       .average()
+                       .getAsDouble();
+        
+    }
+    
     @Override
     public String toString() {
         return "Classroom{" + "id=" + id + ", teacher=" + teacher + ", students=" + students + '}';
