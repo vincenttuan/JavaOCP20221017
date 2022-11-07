@@ -21,4 +21,9 @@ public class Person {
         this.age = age;
     }
     
+    // 自訂方法
+    public void job() {
+        System.out.println("工作");
+    }
+    
 }
