@@ -10,6 +10,12 @@ public class Teacher extends Person {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    @Override
+    public void job() {
+        System.out.println("教課");
+    }
+    
     
     
 }
