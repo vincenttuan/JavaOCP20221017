@@ -15,5 +15,7 @@ public class Main2 {
         // 請求此班級出學生平均成績 ?
         double avg = classroom.getAvgOfScore();
         System.out.println(avg);
+        // 請求出此班級平均年齡
+        
     }
 }
