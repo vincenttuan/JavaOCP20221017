@@ -46,7 +46,7 @@ public class Classroom {
     }
     
     // 計算學生平均成績 
-    public double getAvgOfScore() {
+    public double getScoreOfAvg() {
         if(students.size() == 0) {
             return 0.0;
         }
@@ -55,6 +55,31 @@ public class Classroom {
                        //.mapToInt(student -> student.getScore())
                        .average()
                        .getAsDouble();
+    }
+    
+    // 計算平均年齡
+    public double getAgeOfAvg() {
+        double avg = 0.0;
+        if(teacher == null && students.size() == 0) {
+            return avg;
+        }
+        if(teacher != null && students.size() == 0) {
+            return teacher.getAge();
+        }
+        // 先計算出學生平均年齡
+        double studentAgeOfAvg = students.stream()
+                                         .mapToInt(Student::getAge)
+                                         .average()
+                                         .getAsDouble();
+        // 有學生沒有老師的情況下
+        if(teacher == null) { 
+            return studentAgeOfAvg;
+        }
+        // 有學生有老師的情況下
+        // 先計算出學生年齡總和 + 老師的年齡
+        int sumOfAge = students.stream().mapToInt(Student::getAge).sum() + teacher.getAge();
+        avg = sumOfAge / (double)(students.size() + 1);
+        return avg;
     }
     
     @Override
