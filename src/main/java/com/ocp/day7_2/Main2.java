@@ -12,5 +12,7 @@ public class Main2 {
         classroom.addStudent(s2);
         classroom.addStudent(s3);
         System.out.println(classroom);
+        // 請求此班級出學生平均成績 ?
+        
     }
 }
