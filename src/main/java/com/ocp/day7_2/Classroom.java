@@ -55,7 +55,6 @@ public class Classroom {
                        //.mapToInt(student -> student.getScore())
                        .average()
                        .getAsDouble();
-        
     }
     
     @Override
