@@ -11,4 +11,11 @@ public class Student extends Person {
         this.score = score;
     }
     
+    // 覆寫 Person 的方法
+    @Override
+    public void job() {
+        //super.job();
+        System.out.println("讀書");
+    }
+    
 }

@@ -13,7 +13,9 @@ public class Main {
         teacher.setSalary(70000);
         
         System.out.println(student.getName() + ", " + student.getAge() + ", " + student.getScore());
-        System.out.println(teacher.getName() + ", " + teacher.getAge() + ", " + teacher.getSalary());
+        student.job();
         
+        System.out.println(teacher.getName() + ", " + teacher.getAge() + ", " + teacher.getSalary());
+        teacher.job();
     }
 }
