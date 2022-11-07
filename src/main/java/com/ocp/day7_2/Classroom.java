@@ -43,8 +43,10 @@ public class Classroom {
     public void removeAllStudents() {
         students.clear();
     }
-    
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Classroom{" + "id=" + id + ", teacher=" + teacher + ", students=" + students + '}';
+    }
+
 }
