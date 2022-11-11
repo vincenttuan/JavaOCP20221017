@@ -16,6 +16,8 @@ public class WrapperClass2 {
                          // auto-boxing
         int c = a + b;   // 背後所代表的語法 a + b.intValue();
                          // auto-unboxing
-        System.out.println(c);                 
+        System.out.println(c);        
+        
+        Integer i = null;
     }
 }
