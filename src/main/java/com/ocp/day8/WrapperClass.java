@@ -11,5 +11,6 @@ public class WrapperClass {
         // Integer.parseInt(字串) 字串轉數字
         System.out.println(Integer.parseInt(a) + Integer.parseInt(b));
         
+        
     }
 }
