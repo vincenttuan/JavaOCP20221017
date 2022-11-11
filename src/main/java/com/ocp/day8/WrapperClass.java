@@ -10,5 +10,6 @@ public class WrapperClass {
         System.out.println(a + b); // 總分
         // Integer.parseInt(字串) 字串轉數字
         System.out.println(Integer.parseInt(a) + Integer.parseInt(b));
+        
     }
 }
