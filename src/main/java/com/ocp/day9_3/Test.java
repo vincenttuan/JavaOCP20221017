@@ -6,5 +6,7 @@ public class Test {
         Tiger tiger = new Tiger();
         cat.叫聲();
         tiger.叫聲();
+        System.out.println(cat.name);
+        System.out.println(tiger.name);
     }
 }
