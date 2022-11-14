@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Dao {
     private int number;
+    
     public Dao() {
         number = new Random().nextInt(100_0000);
     }
