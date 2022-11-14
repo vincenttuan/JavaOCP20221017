@@ -5,4 +5,7 @@ public class Cat {
     public void 叫聲() {
         System.out.println("喵~~");
     }
+    public String getName() {
+        return name;
+    }
 }
