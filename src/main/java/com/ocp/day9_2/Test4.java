@@ -12,7 +12,8 @@ public class Test4 {
             System.out.println("salary: " + emp.salary);
             System.out.println(emp.getClass().getSimpleName());
             // 若 emp 是 Manager 則可以轉型成 Manager 並且可以得到 budget
-            if(emp.getClass().getSimpleName().equals("Manager")) {
+            //if(emp.getClass().getSimpleName().equals("Manager")) { // 這種寫法不好
+            if(emp instanceof Manager) { // emp 是否可以轉型成 Manager
                 System.out.println("budget: " + ((Manager)emp).budget);
             }
             emp.job();
