@@ -16,6 +16,9 @@ public class Test4 {
             if(emp instanceof Manager) { // emp 是否可以轉型成 Manager
                 System.out.println("budget: " + ((Manager)emp).budget);
             }
+            if(emp instanceof Supervisor) {
+                System.out.println("stockoption: " + ((Supervisor)emp).stockoption);
+            }
             emp.job();
         }
         
