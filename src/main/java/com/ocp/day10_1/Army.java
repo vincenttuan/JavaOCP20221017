@@ -1,5 +1,8 @@
 package com.ocp.day10_1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Army {
     public static void main(String[] args) {
         Car car1 = new Truck();
@@ -23,6 +26,9 @@ public class Army {
         for(Weapon weapon : weapons) {
             weapon.shoot();
         }
+        // Homework: 將 cars, airplanes 只要是 Weapon 的都放到(add()) list 動態陣列中
+        // 放入後將所有武器齊發
+        List<Weapon> list = new ArrayList<>();
         
         
     }
