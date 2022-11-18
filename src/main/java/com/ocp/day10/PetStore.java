@@ -1,6 +1,7 @@
 package com.ocp.day10;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PetStore {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class PetStore {
         dog.play();
         cat.eat();
         cat.play();
-        ArrayList<Animal> animals = new ArrayList<>();
+        List<Animal> animals = new ArrayList<>();
         animals.add(dog);
         animals.add(cat);
         System.out.println(animals);
