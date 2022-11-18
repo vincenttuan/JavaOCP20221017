@@ -7,6 +7,8 @@ public class PetStore {
     public static void main(String[] args) {
         Animal dog = new Dog();
         Animal cat = new Cat();
+        Dog dog2 = new Dog();
+        Cat cat2 = new Cat();
         dog.eat();
         dog.play();
         cat.eat();
@@ -15,5 +17,8 @@ public class PetStore {
         animals.add(dog);
         animals.add(cat);
         System.out.println(animals);
+        dog.copyRight();
+        dog2.copyRight();
+        
     }
 }
