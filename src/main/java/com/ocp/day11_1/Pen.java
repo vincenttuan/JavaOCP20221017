@@ -1,5 +1,7 @@
 package com.ocp.day11_1;
 
+import java.util.Objects;
+
 public class Pen {
     private String color;
     private int price;
@@ -9,25 +11,32 @@ public class Pen {
     }
 
     @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 17 * hash + Objects.hashCode(this.color);
+        hash = 17 * hash + this.price;
+        return hash;
+    }
+
+    @Override
     public boolean equals(Object obj) {
-        
-        if(this == obj) {
+        if (this == obj) {
             return true;
         }
-        
-        if(!(obj instanceof Pen)) {
+        if (obj == null) {
             return false;
         }
-        
-        Pen pen = (Pen)obj;
-        /*
-        if(color.equals(pen.color) && price == pen.price) {
-            return true;
+        if (getClass() != obj.getClass()) {
+            return false;
         }
-        return false;
-        */
-        return color.equals(pen.color) && price == pen.price;
+        final Pen other = (Pen) obj;
+        if (this.price != other.price) {
+            return false;
+        }
+        return Objects.equals(this.color, other.color);
     }
+
+    
     
     public String getColor() {
         return color;

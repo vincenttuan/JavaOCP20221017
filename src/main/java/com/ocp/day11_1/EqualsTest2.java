@@ -13,5 +13,9 @@ public class EqualsTest2 {
         System.out.println(p1.equals(p2));
         System.out.println(p1.equals("Java"));
         System.out.println(p1.equals(p3));
+        
+        System.out.println(p1.hashCode());
+        System.out.println(p2.hashCode());
+        System.out.println(p3.hashCode());
     }
 }
