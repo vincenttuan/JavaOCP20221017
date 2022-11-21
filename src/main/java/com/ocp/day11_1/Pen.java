@@ -11,10 +11,13 @@ public class Pen {
     @Override
     public boolean equals(Object obj) {
         Pen pen = (Pen)obj;
+        /*
         if(color.equals(pen.color) && price == pen.price) {
             return true;
         }
         return false;
+        */
+        return color.equals(pen.color) && price == pen.price;
     }
     
     public String getColor() {
