@@ -7,10 +7,11 @@ public class EqualsTest2 {
         Pen p3 = new Pen("blue", 20);
         System.out.println(p1);
         System.out.println(p2);
+        System.out.println(p3);
         System.out.println(p1 == p2);
         System.out.println(p1.equals(p1));
         System.out.println(p1.equals(p2));
         System.out.println(p1.equals("Java"));
-        System.out.println(p1.equals(p2));
+        System.out.println(p1.equals(p3));
     }
 }
