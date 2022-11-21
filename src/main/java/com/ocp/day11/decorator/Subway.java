@@ -13,5 +13,7 @@ public class Subway {
         food = new Tuna(food); // 配料
         // 結帳
         System.out.printf("商品組合: %s\n商品價格: %d\n", food.getName(), food.getPrice());
+        System.out.printf("商品組合: %s\n商品價格: %d\n", ((AFood)food).getNameAndPrice(), food.getPrice());
+        
     }
 }

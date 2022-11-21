@@ -1,6 +1,6 @@
 package com.ocp.day11.decorator;
 
-public class Bread extends Food {
+public class Bread extends AFood {
     
     public Bread() {
         name = "麵包";
