@@ -8,6 +8,8 @@ public class Outer {
     public class Inner {
         public void printA() {
             System.out.println("print A");
+            System.out.println(Outer.this.x); // x, Outer.this.x
+            System.out.println(Outer.y); // y, Outer.y
         }
     }
     
@@ -15,6 +17,8 @@ public class Outer {
     public static class SInner {
         public static void printB() {
             System.out.println("print B");
+            //System.out.println(Outer.this.x); // 不可存取外部類別的物件變數
+            System.out.println(Outer.y); // y, Outer.y
         }
     }
     
