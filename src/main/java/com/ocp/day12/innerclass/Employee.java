@@ -20,6 +20,7 @@ public class Employee {
         public void printJob() {
             String name = "我的工作";
             System.out.printf("%s: %s, 員工姓名: %s, level: %d\n", name, this.name, Employee.this.name, level);
+            System.out.printf("score: %d\n", Employee.score);
         }
     }
     
