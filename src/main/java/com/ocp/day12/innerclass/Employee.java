@@ -15,8 +15,8 @@ public class Employee {
             this.level = level;
         }
         public void printJob() {
-            System.out.printf("員工姓名: %s\n", Employee.this.name);
-            System.out.printf("Job name: %s Job level: %d\n", name, level);
+            String name = "我的工作";
+            System.out.printf("%s: %s, 員工姓名: %s, level: %d\n", name, this.name, Employee.this.name, level);
         }
     }
     
