@@ -8,7 +8,7 @@ public class Student {
     
     public void printExam() {
         String subject = "Java"; // 考試科目
-        class Exam {
+        class Exam { // 方法內部類別
             int score = 90; // 考試成績
             @Override
             public String toString() {
