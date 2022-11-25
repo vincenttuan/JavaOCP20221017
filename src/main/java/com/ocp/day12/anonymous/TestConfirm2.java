@@ -9,7 +9,12 @@ public class TestConfirm2 {
         // 及格 60, 高標 70, 低標 40
          IntPredicate pass = (x) -> x >= 60;
          IntPredicate high = (x) -> x >= 70;
-         IntPredicate low = (x) -> x >= 40;
+         IntPredicate low = new IntPredicate() { // 一樣可以透過匿名內部類別來實現(但是不建議)
+            @Override
+            public boolean test(int value) {
+                return value >= 40;
+            }
+         };
          
          Arrays.stream(scores).filter(low).forEach(System.out::println);
         
