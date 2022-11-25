@@ -14,6 +14,14 @@ public class TestCalc {
         
         };
         System.out.println(calc2.submit(10, 20));
+        // Lambda
+        Calc calc3 = (int x, int y) -> { return x + y; };
+        System.out.println(calc3.submit(10, 20));
         
+        Calc calc4 = (x, y) -> { return x + y; };
+        System.out.println(calc4.submit(10, 20));
+        
+        Calc calc5 = (x, y) -> x + y ;
+        System.out.println(calc5.submit(10, 20));
     }
 }
