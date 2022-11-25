@@ -1,6 +1,7 @@
 package com.ocp.day12.anonymous;
 
 import java.util.Arrays;
+import java.util.function.IntConsumer;
 import java.util.function.IntPredicate;
 
 public class TestConfirm2 {
@@ -15,8 +16,11 @@ public class TestConfirm2 {
                 return value >= 40;
             }
          };
+         //IntConsumer printScore = (x) -> System.out.println(x);
+         IntConsumer printScore = System.out::println;
          
-         Arrays.stream(scores).filter(low).forEach(System.out::println);
+         //Arrays.stream(scores).filter(low).forEach(System.out::println);
+         Arrays.stream(scores).filter(low).forEach(printScore);
         
     }
 }
