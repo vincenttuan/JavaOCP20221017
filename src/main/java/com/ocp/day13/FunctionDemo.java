@@ -1,6 +1,7 @@
 package com.ocp.day13;
 
 import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 
 public class FunctionDemo {
@@ -39,5 +40,20 @@ public class FunctionDemo {
         };
         System.out.println("正方形面積: " + biFunction.apply("正方形", 10));
         System.out.println("圓形面積: " + biFunction.apply("圓形", 10));
+        
+        // BinaryOperator
+        /*
+            public interface BiFunction<T, U, R> {
+                R apply(T t, U u);
+            }
+            public interface BinaryOperator<T> extends BiFunction<T, T, T> {
+                
+            }
+        */
+        BinaryOperator<Double> binaryOperator = (h, w) -> w / Math.pow(h/100, 2);
+        BiFunction<Double, Double, Double> biFunction2 = (h, w) -> w / Math.pow(h/100, 2);
+        // 利用 BinaryOperator<Double> 取代 BiFunction<Double, Double, Double>
+        System.out.println(binaryOperator.apply(170.0, 60.0));
+        System.out.println(biFunction2.apply(170.0, 60.0));
     }
 }
