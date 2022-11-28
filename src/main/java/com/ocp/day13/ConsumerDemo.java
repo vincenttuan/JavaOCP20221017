@@ -15,8 +15,16 @@ public class ConsumerDemo {
         // Consumer 多參數
         Consumer<Integer[]> consumer2 = (values) -> {
             int sum = Arrays.stream(values).mapToInt(Integer::intValue).sum();
+            //int sum = Arrays.stream(values).mapToInt(x -> x.intValue()).sum();
             System.out.println(sum);
         };
         consumer2.accept(new Integer[]{100, 90, 80});
+        
+        Consumer<int[]> consumer3 = (values) -> {
+            int sum = Arrays.stream(values).sum();
+            System.out.println(sum);
+        };
+        consumer3.accept(new int[]{70, 60, 50});
+        
     }
 }
