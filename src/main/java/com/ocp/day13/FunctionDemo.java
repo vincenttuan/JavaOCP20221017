@@ -2,6 +2,7 @@ package com.ocp.day13;
 
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
+import java.util.function.DoubleBinaryOperator;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
@@ -67,5 +68,15 @@ public class FunctionDemo {
         */
         UnaryOperator<Double> unaryOperator = (r) -> r * r * 3.14; // Math.pow(r, 2) * Math.PI
         System.out.println(unaryOperator.apply(10.0));
+        
+        // DoubleBinaryOperator/IntBinaryOperator
+        /*
+        public interface DoubleBinaryOperator {
+            double applyAsDouble(double left, double right)
+        }
+        */
+        DoubleBinaryOperator doubleBinaryOperator = (x, y) -> Math.max(x, y);
+        System.out.println("最大值: " + doubleBinaryOperator.applyAsDouble(30, 50));
+        
     }
 }
