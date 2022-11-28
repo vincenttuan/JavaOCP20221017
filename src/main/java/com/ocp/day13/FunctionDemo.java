@@ -3,6 +3,7 @@ package com.ocp.day13;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 public class FunctionDemo {
     public static void main(String[] args) {
@@ -55,5 +56,16 @@ public class FunctionDemo {
         // 利用 BinaryOperator<Double> 取代 BiFunction<Double, Double, Double>
         System.out.println(binaryOperator.apply(170.0, 60.0));
         System.out.println(biFunction2.apply(170.0, 60.0));
+        
+        // UnaryOperator 輸入參數與回傳值的型別一致
+        /*
+        public interface Function<T, R> {
+            R apply(T t);
+        }
+        public interface UnaryOperator<T> extends Function<T, T> {
+        }
+        */
+        UnaryOperator<Double> unaryOperator = (r) -> r * r * 3.14; // Math.pow(r, 2) * Math.PI
+        System.out.println(unaryOperator.apply(10.0));
     }
 }
