@@ -75,7 +75,8 @@ public class FunctionDemo {
             double applyAsDouble(double left, double right)
         }
         */
-        DoubleBinaryOperator doubleBinaryOperator = (x, y) -> Math.max(x, y);
+        //DoubleBinaryOperator doubleBinaryOperator = (x, y) -> Math.max(x, y);
+        DoubleBinaryOperator doubleBinaryOperator = Math::max;
         System.out.println("最大值: " + doubleBinaryOperator.applyAsDouble(30, 50));
         
     }
