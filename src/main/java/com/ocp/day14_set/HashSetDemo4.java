@@ -7,6 +7,7 @@ public class HashSetDemo4 {
     public static void main(String[] args) {
         Set<Num> nums = new LinkedHashSet<>();
         nums.add(new Num(100, 0.5));
+        nums.add(new Num(100, 0.5));
         nums.add(new Num(500, 0.2));
         nums.add(new Num(1000, 0.1));
         System.out.println(nums);

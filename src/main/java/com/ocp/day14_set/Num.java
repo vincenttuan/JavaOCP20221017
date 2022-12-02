@@ -9,6 +9,34 @@ public class Num {
         this.rate = rate;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 67 * hash + this.cash;
+        hash = 67 * hash + (int) (Double.doubleToLongBits(this.rate) ^ (Double.doubleToLongBits(this.rate) >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Num other = (Num) obj;
+        if (this.cash != other.cash) {
+            return false;
+        }
+        return Double.doubleToLongBits(this.rate) == Double.doubleToLongBits(other.rate);
+    }
+    
+    
+    
     public int getCash() {
         return cash;
     }
