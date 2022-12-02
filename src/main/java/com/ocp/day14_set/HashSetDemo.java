@@ -22,7 +22,7 @@ public class HashSetDemo {
             Object next = iter.next();
             System.out.println("元素: " + next);
         }
-        // 將 subject 中的所有數字加總 = ?
+        // 將 subject 中的所有數字加總 part I
         int sum = 0;
         iter = subject.iterator(); // 重新得到 subject 的 走訪器
         while (iter.hasNext()) {
@@ -32,5 +32,14 @@ public class HashSetDemo {
             }
         }
         System.out.println(sum);
+        
+        // 將 subject 中的所有數字加總 part II (Java 8 stream)
+        int sum2 = subject.stream()
+                          .filter(next -> next instanceof Integer)
+                          .mapToInt(next -> Integer.valueOf(next.toString())) // Object -> String -> int
+                          .sum();
+        System.out.println(sum2);             
+        
+        
     }
 }
