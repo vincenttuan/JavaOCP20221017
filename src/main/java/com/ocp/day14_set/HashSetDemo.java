@@ -23,6 +23,14 @@ public class HashSetDemo {
             System.out.println("元素: " + next);
         }
         // 將 subject 中的所有數字加總 = ?
-        
+        int sum = 0;
+        iter = subject.iterator(); // 重新得到 subject 的 走訪器
+        while (iter.hasNext()) {
+            Object next = iter.next();
+            if(next instanceof Integer) {
+                sum += (Integer)next; // 將 Object 轉型 Integer
+            }
+        }
+        System.out.println(sum);
     }
 }
