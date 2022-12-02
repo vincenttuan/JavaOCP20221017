@@ -16,5 +16,7 @@ public class HashSetDemo3 {
         values.add(item2);
         values.add(item3);
         System.out.println(values); // [[100, 0.5], [500, 0.2], [1000, 0.1]]
+        // 是計算出每個 item 元素相乘之後的總和 = ?
+        
     }
 }
