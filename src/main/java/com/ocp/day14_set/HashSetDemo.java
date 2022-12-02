@@ -14,7 +14,7 @@ public class HashSetDemo {
         subject.add("數學");
         subject.add(70);
         subject.add("英文");
-        subject.add(100);
+        subject.add(100); // 重複元素資料所以無法加入
         System.out.println(subject);
         // 走訪器: Iterator, 可以走訪每一個元素
         Iterator iter = subject.iterator(); // 得到 subject 的 走訪器
@@ -22,6 +22,7 @@ public class HashSetDemo {
             Object next = iter.next();
             System.out.println("元素: " + next);
         }
+        // 將 subject 中的所有數字加總 = ?
         
     }
 }
