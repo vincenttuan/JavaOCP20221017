@@ -1,5 +1,6 @@
 package com.ocp.day14_set;
 
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -17,6 +18,17 @@ public class HashSetDemo3 {
         values.add(item3);
         System.out.println(values); // [[100, 0.5], [500, 0.2], [1000, 0.1]]
         // 是計算出每個 item 元素相乘之後的總和 = ?
-        
+        double total = 0;
+        for(Set<Number> item : values) {
+            if(item.size() == 2) {
+                Iterator<Number> iter = item.iterator();
+                int cash = iter.next().intValue();
+                double rate = iter.next().doubleValue();
+                double result = cash * rate;
+                System.out.printf("cash: %d, rate: %.1f, result: %.1f\n", cash, rate, result);
+                total += result;
+            }
+        }
+        System.out.println(total);
     }
 }
