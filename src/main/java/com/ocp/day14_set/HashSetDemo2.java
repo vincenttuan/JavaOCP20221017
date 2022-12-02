@@ -9,8 +9,17 @@ public class HashSetDemo2 {
         // 加入泛型 <> 限制
         Set<Integer> scores = new LinkedHashSet<>();
         scores.add(100);
+        scores.add(null);
         scores.add(80);
         scores.add(70);
+        System.out.println(scores);
+        // 將 null 元素移除(remove)
+        Iterator<Integer> iter2 = scores.iterator();
+        while (iter2.hasNext()) {
+            if(iter2.next() == null) {
+                iter2.remove();
+            }
+        }
         System.out.println(scores);
         // 計算總分
         int sum = 0;
