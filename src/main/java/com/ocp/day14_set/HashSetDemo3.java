@@ -22,8 +22,8 @@ public class HashSetDemo3 {
         for(Set<Number> item : values) {
             if(item.size() == 2) {
                 Iterator<Number> iter = item.iterator();
-                int cash = iter.next().intValue();
-                double rate = iter.next().doubleValue();
+                int cash = iter.next().intValue(); // 第一個元素
+                double rate = iter.next().doubleValue(); // 第二個元素
                 double result = cash * rate;
                 System.out.printf("cash: %d, rate: %.1f, result: %.1f\n", cash, rate, result);
                 total += result;
