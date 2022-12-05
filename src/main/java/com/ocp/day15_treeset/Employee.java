@@ -1,5 +1,7 @@
 package com.ocp.day15_treeset;
 
+import java.util.Objects;
+
 public class Employee {
     private String name;
     private int age;
@@ -11,6 +13,38 @@ public class Employee {
         this.salary = salary;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 53 * hash + Objects.hashCode(this.name);
+        hash = 53 * hash + this.age;
+        hash = 53 * hash + this.salary;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Employee other = (Employee) obj;
+        if (this.age != other.age) {
+            return false;
+        }
+        if (this.salary != other.salary) {
+            return false;
+        }
+        return Objects.equals(this.name, other.name);
+    }
+    
+    
+    
     public String getName() {
         return name;
     }
