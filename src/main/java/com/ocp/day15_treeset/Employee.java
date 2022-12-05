@@ -2,17 +2,22 @@ package com.ocp.day15_treeset;
 
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
     private String name;
     private int age;
     private int salary;
-
+    private static boolean sort = true; // true: 小到大, false: 大到小
+    
     public Employee(String name, int age, int salary) {
         this.name = name;
         this.age = age;
         this.salary = salary;
     }
-
+    
+    public static void setSort(boolean sort) {
+        Employee.sort = sort;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 5;
@@ -72,6 +77,14 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" + "name=" + name + ", age=" + age + ", salary=" + salary + '}';
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        //return age - o.age; // 由小到大
+        //return salary - o.salary;
+        //return o.age - age; // 由大到小
+        return (age - o.age) * (sort ? 1 : -1);
     }
     
     
