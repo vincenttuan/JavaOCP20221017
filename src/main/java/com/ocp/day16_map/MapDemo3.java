@@ -10,7 +10,7 @@ public class MapDemo3 {
         Student s2 = new Student(2, "Mary");
         Student s3 = new Student(3, "Bob");
         Exam e1 = new Exam("Java", 100);
-        Exam e2 = new Exam("Java", 80);
+        Exam e2 = new Exam("Java", 40);
         Exam e3 = new Exam("Java", 75);
         
         Map<Student, Exam> map = new HashMap<>();
