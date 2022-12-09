@@ -25,7 +25,7 @@ public class MapDemo5 {
         System.out.println(map);
         
         // 轉換 Map<String, Integer> 學生姓名, 成績
-        
+        // 注意在撰寫時可能 IDE 不會提示(寫完要 save 錯誤紅線才會消失)
         Map<String, Integer> map2 = map.entrySet()
                                        .stream()
                                        .collect(Collectors.toMap(
