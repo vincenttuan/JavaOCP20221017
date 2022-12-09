@@ -23,6 +23,8 @@ public class CollectionsDemo {
             }
         });
         System.out.println(nums);
-        
+        // 根據 %3 的值來排序(使用 Lambda)
+        Collections.sort(nums, (o1, o2) -> (o1 % 3) - (o2 % 3));
+        System.out.println(nums);
     }
 }
