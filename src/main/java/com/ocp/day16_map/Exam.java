@@ -2,7 +2,7 @@ package com.ocp.day16_map;
 
 import java.util.Objects;
 
-public class Exam {
+public class Exam implements Comparable<Exam>{
     private String subject; // 科目
     private Integer score; // 分數
 
@@ -59,6 +59,11 @@ public class Exam {
     @Override
     public String toString() {
         return "Exam{" + "subject=" + subject + ", score=" + score + '}';
+    }
+
+    @Override
+    public int compareTo(Exam o) {
+        return score - o.score;
     }
     
     
