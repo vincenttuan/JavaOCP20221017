@@ -30,7 +30,7 @@ public class CollectionsDemo {
         Comparator<Integer> comparator2 = (o1, o2) -> o2 - o1;
         Collections.sort(nums, comparator1);
         System.out.println(nums);
-        // 利用 Consume
+        // 利用 Consumer
         BiConsumer<List<Integer>, Comparator<Integer>> consumer1 = (list, comp) -> Collections.sort(list, comp);
         consumer1.accept(nums, comparator2);
         System.out.println(nums);
