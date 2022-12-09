@@ -26,5 +26,11 @@ public class CollectionsDemo {
         // 根據 %3 的值來排序(使用 Lambda)
         Collections.sort(nums, (o1, o2) -> (o1 % 3) - (o2 % 3));
         System.out.println(nums);
+        
+        // 不可修改集合 (不可以對集合進行 add(), remove(), set())
+        nums = Collections.unmodifiableList(nums);
+        //nums.add(50); 
+        //nums.remove(9);
+        //nums.set(0, 99);
     }
 }
