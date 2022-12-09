@@ -26,9 +26,13 @@ public class MapDemo5 {
         
         // 轉換 Map<String, Integer> 學生姓名, 成績
         
-        
-                
-        
+        Map<String, Integer> map2 = map.entrySet()
+                                       .stream()
+                                       .collect(Collectors.toMap(
+                                            e -> e.getKey().getName(),
+                                            e -> e.getValue().getScore()
+                                        ));
+        System.out.println(map2);
         
     }
     
