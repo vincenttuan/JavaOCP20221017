@@ -1,11 +1,14 @@
 package com.ocp.day17_map_groupby;
 
-import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.toSet;
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.summingInt;
+import static java.util.stream.Collectors.mapping;
 
 public class MapGroupByDemo2 {
     public static void main(String[] args) {
@@ -23,12 +26,12 @@ public class MapGroupByDemo2 {
         );
         
         Map<String, Long> result = fruits.stream().collect(
-            Collectors.groupingBy(Fruit::getName, Collectors.counting())
+            groupingBy(Fruit::getName, counting())
         );
         System.out.println(result);
         
         Map<String, Integer> sum = fruits.stream().collect(
-            Collectors.groupingBy(Fruit::getName, Collectors.summingInt(Fruit::getQty))
+            groupingBy(Fruit::getName, summingInt(Fruit::getQty))
         );
         System.out.println(sum);
         
@@ -42,7 +45,7 @@ public class MapGroupByDemo2 {
         }
         */
         Map<Double, List<Fruit>> groupByPrice = fruits.stream().collect(
-            Collectors.groupingBy(Fruit::getPrice)
+            groupingBy(Fruit::getPrice)
         );
         System.out.println(groupByPrice);
         
@@ -65,7 +68,7 @@ public class MapGroupByDemo2 {
         */
         
         Map<Double, Set<String>> groupByPrice2 = fruits.stream().collect(
-            Collectors.groupingBy(Fruit::getPrice, Collectors.mapping(Fruit::getName, Collectors.toSet()))
+            groupingBy(Fruit::getPrice, mapping(Fruit::getName, toSet()))
         );
         System.out.println(groupByPrice2);
     }
