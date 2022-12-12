@@ -24,7 +24,13 @@ public class MayGroupByDemo1 {
                                          );
         
         System.out.println(result);
-        
+        // 在 result 中根據 value 大小排序
+        // 原本: {papaya=2, orange=2, banana=1, apple=3, watermelon=1}
+        // 變為: {banana=1, watermelon=1, papaya=2, orange=2, apple=3}
+        result.entrySet().stream()
+                //.sorted(Map.Entry.<String, Long>comparingByValue().reversed())
+                .sorted(Map.Entry.<String, Long>comparingByValue())
+                .forEachOrdered(e -> System.out.println(e));
     }
     
 }
