@@ -2,6 +2,8 @@ package com.ocp.day17_map_groupby;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class MapGroupByDemo2 {
     public static void main(String[] args) {
@@ -18,5 +20,14 @@ public class MapGroupByDemo2 {
                 new Fruit("banana", 10, 1.99)
         );
         
+        Map<String, Long> result = fruits.stream().collect(
+            Collectors.groupingBy(Fruit::getName, Collectors.counting())
+        );
+        System.out.println(result);
+        
+        Map<String, Integer> sum = fruits.stream().collect(
+            Collectors.groupingBy(Fruit::getName, Collectors.summingInt(Fruit::getQty))
+        );
+        System.out.println(sum);
     }
 }
