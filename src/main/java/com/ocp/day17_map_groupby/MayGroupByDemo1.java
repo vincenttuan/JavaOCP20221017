@@ -1,6 +1,7 @@
 package com.ocp.day17_map_groupby;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -31,6 +32,12 @@ public class MayGroupByDemo1 {
                 //.sorted(Map.Entry.<String, Long>comparingByValue().reversed())
                 .sorted(Map.Entry.<String, Long>comparingByValue())
                 .forEachOrdered(e -> System.out.println(e));
+        
+        Map<String, Long> resultSortedMap = new LinkedHashMap<>();
+        result.entrySet().stream()
+                .sorted(Map.Entry.<String, Long>comparingByValue().reversed())
+                .forEachOrdered(e -> resultSortedMap.put(e.getKey(), e.getValue()));
+        System.out.println(resultSortedMap);
     }
     
 }
