@@ -1,5 +1,6 @@
 package com.ocp.day17_map_groupby;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -29,5 +30,19 @@ public class MapGroupByDemo2 {
             Collectors.groupingBy(Fruit::getName, Collectors.summingInt(Fruit::getQty))
         );
         System.out.println(sum);
+        
+        // group by price
+        /*
+        {
+            1.99=[Fruit{name=banana, qty=20, price=1.99}, Fruit{name=banana, qty=10, price=1.99}], 
+            0.99=[Fruit{name=apple, qty=10, price=0.99}, Fruit{name=apple, qty=20, price=0.99}, Fruit{name=apple, qty=10, price=0.99}, Fruit{name=apple, qty=10, price=0.99}], 
+            2.99=[Fruit{name=orange, qty=10, price=2.99}, Fruit{name=watermelon, qty=10, price=2.99}], 
+            3.99=[Fruit{name=papaya, qty=10, price=3.99}, Fruit{name=papaya, qty=30, price=3.99}]}
+
+        */
+        Map<Double, List<Fruit>> groupByPrice = fruits.stream().collect(
+            Collectors.groupingBy(Fruit::getPrice)
+        );
+        System.out.println(groupByPrice);
     }
 }
