@@ -19,7 +19,15 @@ public class DataCoa {
             //System.out.println(jsonStr);
             Gson gson = new Gson();
             BadRice[] badRices = gson.fromJson(jsonStr, BadRice[].class);
-            System.out.printf("資料筆數: %d\n", badRices.length);
+            System.out.printf("資料總筆數: %d\n", badRices.length);
+            String keyword = "池上";
+            System.out.printf("品名關鍵字: %s 的資料下:\n", keyword);
+            for(BadRice badRice : badRices) {
+                if(badRice.品名.contains(keyword)) {
+                    System.out.printf("品名: %s Title: %s 不合格原因: %s\n", badRice.品名, badRice.Title, badRice.不合格原因);
+                }
+            }
+            
             
         } catch (IOException e) { // 因為 MalformedURLException | IOException 有繼承關係所以只要寫 IOException 即可
             System.out.println(e);
