@@ -6,8 +6,9 @@ public class ExceptionDemo3 {
             printScore(-40);
         } catch (Exception ex) {
             System.out.println(ex);
+        } finally {
+            System.out.println("結束...");
         }
-        System.out.println("結束...");
     }
     
     // 印出 score 與是否及格
