@@ -1,5 +1,6 @@
 package com.ocp.day18_exception;
 
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -15,7 +16,10 @@ public class DataCoa {
             InputStream in = url.openStream(); // 取得資料串流
             Scanner scanner = new Scanner(in, "UTF-8");
             String jsonStr = scanner.useDelimiter("\\A").next();
-            System.out.println(jsonStr);
+            //System.out.println(jsonStr);
+            Gson gson = new Gson();
+            BadRice[] badRices = gson.fromJson(jsonStr, BadRice[].class);
+            System.out.printf("資料筆數: %d\n", badRices.length);
             
         } catch (IOException e) { // 因為 MalformedURLException | IOException 有繼承關係所以只要寫 IOException 即可
             System.out.println(e);
