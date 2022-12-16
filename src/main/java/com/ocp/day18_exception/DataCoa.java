@@ -20,7 +20,7 @@ public class DataCoa {
             Gson gson = new Gson();
             BadRice[] badRices = gson.fromJson(jsonStr, BadRice[].class);
             System.out.printf("資料總筆數: %d\n", badRices.length);
-            String keyword = "池上";
+            String keyword = "冠軍";
             System.out.printf("品名關鍵字: %s 的資料下:\n", keyword);
             for(BadRice badRice : badRices) {
                 if(badRice.品名.contains(keyword)) {
