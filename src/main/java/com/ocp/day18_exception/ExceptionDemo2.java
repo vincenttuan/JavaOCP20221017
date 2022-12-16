@@ -20,6 +20,5 @@ public class ExceptionDemo2 {
         }
         boolean isPass = score >= 60;
         System.out.printf("%d %s\n", score, isPass?"及格":"不及格");
-        
     }
 }
