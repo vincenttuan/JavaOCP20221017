@@ -16,10 +16,11 @@ public class DataCoa {
             Scanner scanner = new Scanner(in, "UTF-8");
             String jsonStr = scanner.useDelimiter("\\A").next();
             System.out.println(jsonStr);
+            
         } catch (IOException e) { // 因為 MalformedURLException | IOException 有繼承關係所以只要寫 IOException 即可
             System.out.println(e);
         }
-        
-        
     }
+    
+    
 }
