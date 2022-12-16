@@ -4,6 +4,7 @@ public class ExceptionDemo1 {
     public static void main(String[] args) {
         // finally
         printAvg(10, 0);
+        
     }
     
     public static void printAvg(int x, int y) {
@@ -11,9 +12,10 @@ public class ExceptionDemo1 {
         try {
             avg = x / y;
         } catch (Exception e) {
-            System.out.println(e);
+            //System.out.println(e);
+            e.printStackTrace(System.out);
             //return; // finally 區段仍會執行
-            System.exit(1); // 0: 正常離開(資源都將會被釋放), 1: 非正常離開(一般都寫在 catch 區段中)
+            //System.exit(1); // 0: 正常離開(資源都將會被釋放), 1: 非正常離開(一般都寫在 catch 區段中)
         } finally {
             System.out.printf("一定要執行 avg = %d\n", avg); // 一定要執行
         }
