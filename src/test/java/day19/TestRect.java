@@ -15,10 +15,22 @@ public class TestRect {
         // Assert
         // 設定期望(expected)要得到的值
         int expectedArea = 200;
-        
         // 將 expected 與 act 進行比對
         Assert.assertEquals(expectedArea, actArea);
-        
     }
+    @Test
+    public void test2() {
+        // 利用 3A SOP步驟進行測試
+        // Arrange 安排要測試的物件
+        Rect rect = new Rect(10, 20);
+        // Act 設定實際上會得到的值
+        int actMeter = rect.getMeter();
+        // Assert
+        // 設定期望(expected)要得到的值
+        int expectedMeter = 60;
+        // 將 expected 與 act 進行比對
+        Assert.assertEquals(expectedMeter, actMeter);
+    }
+    
     
 }
