@@ -13,7 +13,7 @@ public class Select {
         // JDBC 4.0 會有 META-INF > service > java.sql.Driver 的結構
         Class.forName("org.apache.derby.jdbc.ClientDriver");
         // 透過 DriverManager 來得到 Connection
-        String url = ""; // 資料庫連線路徑
+        String url = "jdbc:derby://localhost:1527/sample"; // 資料庫連線路徑
         String user = "app";
         String password = "app";
         Connection conn = DriverManager.getConnection(url, user, password);
