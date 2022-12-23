@@ -1,3 +1,4 @@
+use mydb;
 -- 刪除資料表
 drop table employee;
 drop table department;
