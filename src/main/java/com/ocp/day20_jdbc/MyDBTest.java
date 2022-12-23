@@ -14,5 +14,8 @@ public class MyDBTest {
         
         List<Employee> employees = myDao.queryEmployees();
         System.out.println(employees);
+        for(Employee employee : employees) {
+            System.out.println(employee.getName() + " -> " + employee.getDepartment().getName());
+        }
     }
 }
