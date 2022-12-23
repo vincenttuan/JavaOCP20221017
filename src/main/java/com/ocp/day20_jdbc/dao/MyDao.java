@@ -17,11 +17,12 @@ public class MyDao {
         dataSource.setPortNumber(1527);
         dataSource.setUser("app");
         dataSource.setPassword("app");
-        dataSource.setDatabaseName("sample");
+        dataSource.setDatabaseName("mydb");
     }
     
     public List<Department> queryDepartments() {
         List<Department> departments = new ArrayList<>();
+        //String sql = "select id, name from mydb.department";
         String sql = "select id, name from department";
         // try with resources 寫法, 會自動關閉 Closeable 物件
         // Java 在跳離 try-catch 前會自動執行 close() 方法 <-- 在 finally 裡面
