@@ -51,7 +51,7 @@ public class MyDao {
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         String sql = "select id, name, salary, dept_id from employee";
         List<Employee> employees = jdbcTemplate.query(sql, new BeanPropertyRowMapper(Employee.class));
-        // 再根據每一個 employee 查詢 department
+        // 再根據每一個 employee 查詢自己的 department 根據 dept_id
         for(Employee employee : employees) {
             sql = "select id, name from department where id=?";
             Object[] args = {employee.getDeptId()};

@@ -39,7 +39,7 @@ public class Employee {
     public void setDeptId(Integer deptId) {
         this.deptId = deptId;
     }
-
+    
     public Department getDepartment() {
         return department;
     }
