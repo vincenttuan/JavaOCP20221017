@@ -1,6 +1,7 @@
 package com.ocp.day20_jdbc.dao;
 
 import com.ocp.day20_jdbc.entity.Department;
+import com.ocp.day20_jdbc.entity.Employee;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,6 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.derby.jdbc.ClientDataSource;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 public class MyDao {
     public static ClientDataSource dataSource;
@@ -42,5 +45,12 @@ public class MyDao {
             e.printStackTrace();
         }
         return departments;
+    }
+
+    public List<Employee> queryEmployees() {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        String sql = "select id, name, salary, dept_id from employee";
+        List<Employee> employees = jdbcTemplate.query(sql, new BeanPropertyRowMapper(Employee.class));
+        return employees;
     }
 }
