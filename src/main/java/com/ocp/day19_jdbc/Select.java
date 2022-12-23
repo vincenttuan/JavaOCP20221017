@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import org.apache.derby.jdbc.ClientDataSource;
 
 // SQL => SELECT c.CUSTOMER_ID, c."NAME", c.PHONE, c.EMAIL FROM CUSTOMER c
 public class Select {
@@ -18,6 +19,7 @@ public class Select {
         String url = "jdbc:derby://localhost:1527/sample"; // 資料庫連線路徑
         String user = "app";
         String password = "app";
+        
         Connection conn = DriverManager.getConnection(url, user, password);
         // 取得 Statement
         Statement stmt = conn.createStatement();
@@ -37,6 +39,9 @@ public class Select {
         rs.close();
         stmt.close();
         conn.close();
+        
+        
+        
         
     }
     
