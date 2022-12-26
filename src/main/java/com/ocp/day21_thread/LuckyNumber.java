@@ -17,6 +17,7 @@ public class LuckyNumber extends Thread {
         String threadName = Thread.currentThread().getName();
         for(int i=1;;i++) {            
             int number = (int)(Math.random() * 1000);
+            //System.out.printf("%s 在 %d 次才得到 %d\n", threadName, i, number);
             if(number == this.number) {
                 System.out.printf("%s 總共取了 %d 次才得到 %d\n", threadName, i, number);
                 break;
