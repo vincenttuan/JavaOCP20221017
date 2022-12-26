@@ -16,6 +16,7 @@ public class RunnableExec2 {
                 System.out.println(new Date());
             }
         };
+        
         Runnable r2 = () -> System.out.println(Math.random());
         
         Thread t1 = new Thread(r1);
