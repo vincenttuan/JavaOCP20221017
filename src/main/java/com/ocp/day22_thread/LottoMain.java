@@ -3,8 +3,6 @@ package com.ocp.day22_thread;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class LottoMain {
     public static void main(String[] args) {
