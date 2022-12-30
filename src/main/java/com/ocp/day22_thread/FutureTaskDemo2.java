@@ -13,8 +13,8 @@ public class FutureTaskDemo2 {
             System.out.println("我是 Callable 有回傳值");
             return "Finish";
         };
-        FutureTask task1 = new FutureTask(callable);
-        FutureTask task2 = new FutureTask(runnable, "Finish");
+        //FutureTask task1 = new FutureTask(callable);
+        //FutureTask task2 = new FutureTask(runnable, "Finish");
         // 透過 ExecutorService 來執行 task
         ExecutorService service = Executors.newSingleThreadExecutor();
         //service.execute(task1);
