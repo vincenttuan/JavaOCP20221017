@@ -24,12 +24,19 @@ class Father extends Thread {
         System.out.println("3. 爸爸發現沒瓦斯了");
         System.out.println("4. 爸爸請瓦斯工人送瓦斯");
         
+        Worker worker = new Worker();
+        worker.start();
+        
+        System.out.println("7. 爸爸開始洗澡");
+        System.out.println("8. 爸爸洗完澡了");
     }
 }
 
 class Worker extends Thread {
     @Override
     public void run() {
-        
+        System.out.println("5. 瓦斯工人開始送瓦斯 ...");
+        for(int i=0;i<Integer.MAX_VALUE;i++); // 模擬忙碌的狀況
+        System.out.println("6. 瓦斯工人將瓦斯送達並裝好");
     }
 }
