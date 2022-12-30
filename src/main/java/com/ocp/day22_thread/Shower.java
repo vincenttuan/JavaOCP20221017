@@ -1,6 +1,10 @@
 package com.ocp.day22_thread;
 // 第一條執行緒: 爸爸
 // 第二條執行緒: 瓦斯工人
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 // 1. 爸爸下班回家
 // 2. 爸爸要洗熱水澡
 // 3. 爸爸發現沒瓦斯了
@@ -11,7 +15,7 @@ package com.ocp.day22_thread;
 // 8. 爸爸洗完澡了
 public class Shower {
     public static void main(String[] args) {
-        
+        new Father().start();
     }
 }
 
@@ -26,6 +30,12 @@ class Father extends Thread {
         
         Worker worker = new Worker();
         worker.start();
+        try {
+            // Father 要等待 Worker 完成後再執行後續實作
+            worker.join();
+        } catch (InterruptedException ex) {
+            System.out.println(ex);
+        }
         
         System.out.println("7. 爸爸開始洗澡");
         System.out.println("8. 爸爸洗完澡了");
