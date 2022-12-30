@@ -8,7 +8,7 @@ public class Account {
         this.balance = balance;
     }
     
-    public void withdraw(int amount) {
+    public synchronized void withdraw(int amount) {
         String threadName = Thread.currentThread().getName();
         System.out.printf("%s 提款 $%d 目前餘額: $%d\n", threadName, amount, balance);
         if(balance >= amount) {
