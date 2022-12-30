@@ -12,7 +12,8 @@ public class Withdraw implements Runnable {
     
     @Override
     public void run() {
-        account.withdraw(amount); // 提款去 
+        //account.withdraw(amount); // 提款去 
+        account.withdraw2(amount); // 提款去 
     }
     
 }

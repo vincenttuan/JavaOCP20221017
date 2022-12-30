@@ -23,7 +23,6 @@ public class Account {
 
     public void withdraw2(int amount) {
         String threadName = Thread.currentThread().getName();
-
         synchronized (this) {
             System.out.printf("%s 提款 $%d 目前餘額: $%d\n", threadName, amount, balance);
             if (balance >= amount) {
