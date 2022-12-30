@@ -32,7 +32,8 @@ class Father extends Thread {
         worker.start();
         try {
             // Father 要等待 Worker 完成後再執行後續實作
-            worker.join();
+            worker.join(5000);
+            //Thread.sleep(5000);
         } catch (InterruptedException ex) {
             System.out.println(ex);
         }
