@@ -3,6 +3,7 @@ package com.ocp.day23_thread;
 import java.util.Random;
 import java.util.concurrent.CyclicBarrier;
 
+// 循環屏障
 public class Car implements Runnable {
     private CyclicBarrier cb;
     public Car(CyclicBarrier cb) {
