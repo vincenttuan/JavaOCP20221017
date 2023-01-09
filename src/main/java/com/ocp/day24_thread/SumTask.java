@@ -30,7 +30,7 @@ public class SumTask extends RecursiveTask<Integer>{
         }
         
         // 2. 反之任務過大需一分為二
-        int middle = (end - start) / 2;
+        int middle = (end + start) / 2;
         System.out.printf("split %d~%d ==> %d~%d, %d~%d\n", start, end, start, middle, middle, end);
         // 3. 拆分任務(fork)
         SumTask sumTask1 = new SumTask(array, start, middle);
