@@ -26,6 +26,9 @@ public class InvokeAllDemo {
         for(Future future : results) {
             System.out.println(future.get());
         }
+        System.out.println("------------------------");
+        Integer result = service.invokeAny(list);
+        System.out.println(result);
         service.shutdown();
         
     }
