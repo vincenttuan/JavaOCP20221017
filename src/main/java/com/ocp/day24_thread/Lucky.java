@@ -10,6 +10,7 @@ public class Lucky implements Callable<Integer> {
         //Thread.sleep(new Random().nextInt(10));
         Thread.sleep(500);
         int n = new Random().nextInt(100);
+        System.out.println(n);
         return n;
     }
     
