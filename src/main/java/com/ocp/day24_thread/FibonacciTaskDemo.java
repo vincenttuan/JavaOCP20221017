@@ -5,7 +5,7 @@ import java.util.concurrent.ForkJoinTask;
 
 public class FibonacciTaskDemo {
     public static void main(String[] args) {
-        int num = 40;
+        int num = 50;
         long startTime, endTime;
         // 一般方法
         startTime = System.currentTimeMillis();
