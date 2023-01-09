@@ -3,7 +3,7 @@ package com.ocp.day24_thread;
 import java.util.concurrent.RecursiveTask;
 
 public class FibonacciTask extends RecursiveTask<Long>{
-    private static final int THRESHOLD = 30;
+    private static final int THRESHOLD = 35;
     private int num;
     public FibonacciTask(int num) {
         this.num = num;
