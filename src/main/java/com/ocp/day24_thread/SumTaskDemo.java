@@ -8,13 +8,13 @@ public class SumTaskDemo {
     public static void main(String[] args) {
         int len = 10;
         int[] array = new int[len];
+        for(int i=0;i<array.length;i++) {
+            array[i] = i + 1;
+        }
         // 期望結果
         int expectedSum = 0;
         // 時間
         long startTime, endTime;
-        for(int i=0;i<array.length;i++) {
-            array[i] = i + 1;
-        }
         // 一般計算
         startTime = System.currentTimeMillis();
         for(int i=0;i<array.length;i++) {
