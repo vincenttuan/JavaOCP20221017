@@ -27,5 +27,17 @@ public class CreateFolderAndFile {
         } else {
             System.out.println("/news.txt 檔案已存在!");
         }
+        
+        // 判斷某資源路徑指的是檔案or目錄 ?
+        String testPath = "src/main/java/com/ocp/day25_io/data";
+        File testFile = new File(testPath);
+        System.out.printf("%s 是路徑 => %b\n", testPath, testFile.isDirectory());
+        System.out.printf("%s 是檔案 => %b\n", testPath, testFile.isFile());
+        
+        testPath = "src/main/java/com/ocp/day25_io/data/news.txt";
+        testFile = new File(testPath);
+        System.out.printf("%s 是路徑 => %b\n", testPath, testFile.isDirectory());
+        System.out.printf("%s 是檔案 => %b\n", testPath, testFile.isFile());
+        
     }
 }
