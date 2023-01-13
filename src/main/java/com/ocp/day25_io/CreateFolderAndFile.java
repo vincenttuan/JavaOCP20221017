@@ -9,9 +9,9 @@ public class CreateFolderAndFile {
     public static void main(String[] args) throws IOException {
         String basePath = "src/main/java/com/ocp/day25_io";
         String folderPath = basePath + "/data";
-        File folderFile = new File(folderPath); // 資料夾物件
         
         // 建立資料夾
+        File folderFile = new File(folderPath); // 資料夾物件
         if(!folderFile.exists()) { // 若路徑資料夾是否存在 ?
             folderFile.mkdir(); // 建立資料夾
             System.out.println("/data 資料夾建立成功!");
