@@ -12,7 +12,7 @@ public class Copy {
             
             char[] buffer = new char[1];
             while (fr.read(buffer) != -1) {                
-                fw.append(new String(buffer));
+                fw.append(new String(buffer)); // new String(buffer) 表示 char[] 轉 String
             }
             System.out.println("Copy OK !");
             
