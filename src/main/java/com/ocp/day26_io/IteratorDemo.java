@@ -26,9 +26,11 @@ public class IteratorDemo {
             e.printStackTrace();
         }
         // 3. Files.readAllLines() (List 集合)
-        System.out.println("3. Files.readAllLines() (List 集合)");
+        System.out.println("3. Files.readAllLines()");
         List<String> list = Files.readAllLines(path);
         list.stream().forEach(System.out::println);
-        
+        // 4. Files.lines() (Stream 串流)
+        System.out.println("4. Files.lines()");
+        Files.lines(path).forEach(System.out::println);
     }
 }
