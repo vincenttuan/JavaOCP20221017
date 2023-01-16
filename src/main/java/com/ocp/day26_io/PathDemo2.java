@@ -20,7 +20,14 @@ public class PathDemo2 {
         Path path4_to_path3 = path4.relativize(path3);
         System.out.println(path3_to_path4);
         System.out.println(path4_to_path3);
-                
+        // 比較頭尾
+        Path path5 = Paths.get("C:/temp/company/finance/salary.txt");
+        Path root = Paths.get("C:/temp");
+        Path file = Paths.get("salary.txt");
+        System.out.println(path5.startsWith(root)); // 起始是否是 root (C:/temp)
+        System.out.println(path5.endsWith(file)); // 結尾是否是 file (salary.txt)
+        
+        
         
     }
 }
