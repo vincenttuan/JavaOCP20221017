@@ -13,5 +13,14 @@ public class PathDemo2 {
         Path path2 = Paths.get("data/salary.txt"); // 若 /data/salary.txt 絕對路徑結合
         path1 = path1.resolve(path2);
         System.out.println(path1);
+        // 路徑切換
+        Path path3 = Paths.get("home");
+        Path path4 = Paths.get("home/sally/bar");
+        Path path3_to_path4 = path3.relativize(path4);
+        Path path4_to_path3 = path4.relativize(path3);
+        System.out.println(path3_to_path4);
+        System.out.println(path4_to_path3);
+                
+        
     }
 }
