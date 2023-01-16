@@ -18,8 +18,8 @@ public class IteratorDemo {
         } catch(IOException e) {
             e.printStackTrace();
         }
-        // 2. Files.newBufferedReader
-        System.out.println("2. Files.newBufferedReader:");
+        // 2. Files.newBufferedReader()
+        System.out.println("2. Files.newBufferedReader():");
         try(BufferedReader br = Files.newBufferedReader(path)) {
             br.lines().forEach(System.out::println);
         } catch (IOException e) {
