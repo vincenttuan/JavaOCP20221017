@@ -11,8 +11,10 @@ public class Java11ReadAndWrite {
         String str = "Hello";
         String fileName = "src/main/java/com/ocp/day26_io/demo.txt";
         Path path = Paths.get(fileName);
+        // write
         Files.writeString(Files.createFile(path), str, StandardOpenOption.WRITE);
         System.out.println(str + " written to " + path.toAbsolutePath());
+        // read
         String s = Files.readString(path);
         System.out.println("read: " + s);
 
