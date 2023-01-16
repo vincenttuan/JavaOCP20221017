@@ -12,7 +12,8 @@ public class FilesCopyAndDelete {
         Path dest = Paths.get("src/main/java/com/ocp/day26_io/boss.png");
         
         Files.copy(source, dest, StandardCopyOption.REPLACE_EXISTING);
-        
+        Files.delete(source);
+        //Files.deleteIfExists(dest);
         System.out.println("COPY OK!");
         
     }
